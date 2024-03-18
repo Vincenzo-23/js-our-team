@@ -58,6 +58,7 @@ for(let i = 0; i < teamMembers.length; i++){
     //stampo nel DOM usando il metodo append sull'elemento con classe team_info
     teamInfoElement.append(paragraphElement)
 
+    
     //creo l'element img nel DOM
     const image = document.createElement(`img`)
     //setto l'attributo src all'elemento img
