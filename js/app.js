@@ -1,5 +1,3 @@
-console.log("Inizio")
-
 //creare un array di oggetti utilizzando i dati forniti
 
 const teamMembers = [
@@ -52,13 +50,13 @@ for(let i = 0; i < teamMembers.length; i++){
     // - creo nel DOM l'elemento paragraphElement
     const paragraphElement = document.createElement(`p`)
 
-    //stampo le stesse informazioni su DOM nell'elemento con classe team_info
-    paragraphElement.innerHTML += `
+    //inserisco le informazioni all'interno dell'elemento paragraphElement con il metodo innerHTML
+    paragraphElement.innerHTML = `
     Name: ${teamMember.name} <br>
     Role: ${teamMember.role} <br>
-    Picture ${teamMember.picture}
+    Picture ${teamMember.picture} 
     `
-    //stampo nel dom paragraphElement usando il metodo append
+    //stampo nel DOM usando il metodo append sull'elemento con classe team_info
     teamInfoElement.append(paragraphElement)
 }
 
