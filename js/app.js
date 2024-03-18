@@ -41,12 +41,12 @@ const teamInfoElement = document.querySelector(".team_info")
 // - utilizzo un ciclo for per ciclare quindi l'array
 
 for(let i = 0; i < teamMembers.length; i++){
-
+    
     const teamMember = teamMembers[i]
-
+    
     //stampo le informazioni in console
-    console.log(teamMember)
-
+    // console.log(teamMember)
+    
     // - creo nel DOM l'elemento paragraphElement
     const paragraphElement = document.createElement(`p`)
 
@@ -54,10 +54,16 @@ for(let i = 0; i < teamMembers.length; i++){
     paragraphElement.innerHTML = `
     Name: ${teamMember.name} <br>
     Role: ${teamMember.role} <br>
-    Picture ${teamMember.picture} 
     `
     //stampo nel DOM usando il metodo append sull'elemento con classe team_info
     teamInfoElement.append(paragraphElement)
+
+    //creo l'element img nel DOM
+    const image = document.createElement(`img`)
+    //setto l'attributo src all'elemento img
+    image.setAttribute("src", `./img/${teamMember.picture}`)
+    //stampo nel DOM usando il metodo append in ogni paragrafo la foto con la src diversa
+    paragraphElement.append(image)
 }
 
 
